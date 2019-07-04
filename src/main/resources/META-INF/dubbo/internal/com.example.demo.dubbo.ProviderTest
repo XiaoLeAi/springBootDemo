@@ -1,0 +1,2 @@
+test1=com.example.demo.dubbo.impl.ProviderTestImpl1
+test2=com.example.demo.dubbo.impl.ProviderTestImpl2
