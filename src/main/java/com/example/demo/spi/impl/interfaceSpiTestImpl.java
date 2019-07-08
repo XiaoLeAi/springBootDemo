@@ -9,6 +9,6 @@ import com.example.demo.spi.InterfaceSpiTest;
 public class interfaceSpiTestImpl implements InterfaceSpiTest {
     @Override
     public void sayHello() {
-        System.out.println("hello");
+        System.out.println(interfaceSpiTestImpl.class.getName()+": say hello!");
     }
 }
