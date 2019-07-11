@@ -2,10 +2,14 @@ package com.example.demo.test.domain;
 
 import com.example.demo.annotation.NameScanner;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @auther le
  * @date 2019/2/19 15:51
  */
+
 public class Person {
 
     @NameScanner
@@ -15,9 +19,18 @@ public class Person {
     private String depaetment;
     private String brithday;
     private String score;
+    private List<Person> maps;
 
     public Person() {
         this.name = "张三";
+    }
+
+    public List<Person> getMaps() {
+        return maps;
+    }
+
+    public void setMaps(List<Person> maps) {
+        this.maps = maps;
     }
 
     public String getName() {
@@ -77,6 +90,7 @@ public class Person {
                 ", depaetment='" + depaetment + '\'' +
                 ", brithday='" + brithday + '\'' +
                 ", score='" + score + '\'' +
+                ", maps=" + maps +
                 '}';
     }
 }
