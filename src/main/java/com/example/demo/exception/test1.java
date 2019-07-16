@@ -8,13 +8,12 @@ import org.apache.poi.ss.formula.functions.T;
  */
 public class test1 {
 
-    public static <T> T test(T t) {
-        try {
-            int i = 1/0;
-        } catch (Exception e) {
-            e.printStackTrace();
-           throw new RuntimeException();
-        }
-        return t;
+    public static void main(String[] args) {
+        test();
+    }
+
+    public static void test() {
+            int i = 3&4;
+        System.out.println(i);
     }
 }

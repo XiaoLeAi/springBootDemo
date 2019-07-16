@@ -19,12 +19,17 @@ public class Json2Excel {
 
 
     public static void main(String[] args) throws IOException {
+        toExcel("无角色用户");
+        return;
+    }
+
+    private static void toExcel(String fileName) throws IOException {
         Set<String> keys = null;
         // 创建HSSFWorkbook对象
         HSSFWorkbook wb = new HSSFWorkbook();
         // 创建HSSFSheet对象
         HSSFSheet sheet = wb.createSheet("sheet0");
-        File file = new File("C:\\Users\\wangj\\Desktop\\json\\经营数据.json");
+        File file = new File("C:\\Users\\wangj\\Desktop\\json\\"+fileName+".json");
         String str = FileUtils.readFileToString(file, "utf-8");
         JSONArray jsonArray = JSONObject.parseArray(str);
         // 创建HSSFRow对象
@@ -45,7 +50,7 @@ public class Json2Excel {
             }
         }
         // 输出Excel文件
-        FileOutputStream output = new FileOutputStream("C:\\Users\\wangj\\Desktop\\json\\经营数据.xls");
+        FileOutputStream output = new FileOutputStream("C:\\Users\\wangj\\Desktop\\json\\"+fileName+".xls");
         wb.write(output);
         output.flush();
         output.close();
