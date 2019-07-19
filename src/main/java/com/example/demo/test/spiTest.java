@@ -13,7 +13,7 @@ public class spiTest {
     public static void main(String[] args) {
         ExtensionLoader<ProviderTest> extensionLoader = ExtensionLoader.getExtensionLoader(ProviderTest.class);
         ProviderTest adaptiveExtension = extensionLoader.getAdaptiveExtension();
-        URL url = URL.valueOf("test://localhost/test?provider.test=test2");
+        URL url = URL.valueOf("SynTest://localhost/SynTest?provider.SynTest=test2");
         adaptiveExtension.adaptive("你好",url);
     }
 }

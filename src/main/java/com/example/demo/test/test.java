@@ -1,5 +1,6 @@
 package com.example.demo.test;
 
+import com.example.demo.thread.domian.LockTestDomain;
 import com.example.demo.test.domain.Person;
 import org.springframework.beans.BeanUtils;
 
@@ -10,9 +11,12 @@ import org.springframework.beans.BeanUtils;
 public class test {
 
     public static void main(String[] args) {
-        Person person = new Person();
-        setValue(person);
-        System.out.println(person);
+        LockTestDomain lock = new LockTestDomain();
+        LockTestDomain lock1 = new LockTestDomain();
+        lock.setIqp("iqp1");
+        lock1.setIqp("iqp1");
+        String iqp1 = new String("iqp1");
+        System.out.println(lock1.iqp==lock1.iqp);
     }
 
     public static void setValue(Person person) {
