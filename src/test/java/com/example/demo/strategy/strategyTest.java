@@ -1,5 +1,6 @@
 package com.example.demo.strategy;
 
+import com.alibaba.dubbo.common.URL;
 import com.example.demo.DemoApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,5 +24,10 @@ public class strategyTest {
     public void buildContract() {
 
         strategy.buildContract("2");
+    }
+
+    @Test
+    public void test() {
+
     }
 }

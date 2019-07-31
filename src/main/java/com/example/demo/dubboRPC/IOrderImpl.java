@@ -1,8 +1,11 @@
 package com.example.demo.dubboRPC;
 
+import org.springframework.stereotype.Service;
+
 /**
  * 订单实现类
  */
+@Service
 public class IOrderImpl implements IOrder {
 
     @Override

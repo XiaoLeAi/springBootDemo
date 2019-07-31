@@ -1,5 +1,7 @@
 package com.example.demo.dubboRPC;
 
+import org.springframework.stereotype.Service;
+
 public interface IOrder {
     /**
      * 同步调用
